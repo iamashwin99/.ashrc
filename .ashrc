@@ -1,10 +1,18 @@
 ###### Ashwin's Customizations ######
 # aliases
-alias conda="micromamba"
+# if micromamba exists, alias conda to micromamba
+if [ -x "$(command -v micromamba)" ]; then
+  alias conda="micromamba"
+fi
+# ls with colors
 alias ls="ls --color=auto"
+# ls -lah returns long listing with human readable sizes
 alias l="ls -lah"
-alias spackitup='source share/spack/setup-env.sh' # alias to spack setup env
-alias loadopus='CURDIR=`pwd`; cd ~/spackbox/spacklatest; spackitup ;spack env activate octopus_latest; spack load octopus; cd $CURDIR'
+# alias to spack setup env
+alias spackitup='source share/spack/setup-env.sh' 
+# alias to load octopus
+alias loadopus='CURDIR=$(pwd); cd ~/spackbox/spacklatest; spackitup; spack env activate octopus_latest; spack load octopus; cd "$CURDIR"'
+# alias to batcat
 alias c='batcat'
 
 # ENVs
@@ -12,7 +20,7 @@ export EDITOR='code' # choose vscode as the default editor
 
 # Functions
 # Create a new directory and enter it
-function mk() {
+function mkcd() {
   mkdir -p "$@" && cd "$@"
 }
 
