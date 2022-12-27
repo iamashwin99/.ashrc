@@ -11,8 +11,13 @@ alias c='batcat'
 export EDITOR='code' # choose vscode as the default editor
 
 # Functions
-
 # Create a new directory and enter it
 function mk() {
   mkdir -p "$@" && cd "$@"
 }
+
+# Startup commands
+# if conda exists, activate base
+if [ -x "$(command -v conda)" ]; then
+  conda activate base
+fi
