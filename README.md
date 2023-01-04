@@ -8,3 +8,10 @@ Copy `.ashrc` file to root ( home ) and then edit the right rc file (~/.bashrc f
 ###### Ashwin's Customizations ######
 [[ ! -f ~/.ashrc ]] || . ~/.ashrc
 ```
+# TODO
+ - [ ] Add zsh configs 
+ - [ ] [Oh My Zsh + PowerLevel10k](https://dev.to/abdfnx/oh-my-zsh-powerlevel10k-cool-terminal-1no0)
+ - [ ] nvm and node
+ - [ ] [tmux powerlevel10k](https://blog.bapt.name/2020/04/25/terminal-setup-zsh-tmux-powerlevel10k/)
+ - [ ] [Micromamba](https://mamba.readthedocs.io/en/latest/installation.html)
+ 
