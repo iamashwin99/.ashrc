@@ -14,4 +14,5 @@ Copy `.ashrc` file to root ( home ) and then edit the right rc file (~/.bashrc f
  - [ ] nvm and node
  - [ ] [tmux powerlevel10k](https://blog.bapt.name/2020/04/25/terminal-setup-zsh-tmux-powerlevel10k/)
  - [ ] [Micromamba](https://mamba.readthedocs.io/en/latest/installation.html)
+ - [ ] [Zoxide](https://github.com/ajeetdsouza/zoxide)
  
