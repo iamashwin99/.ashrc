@@ -16,4 +16,5 @@ Copy `.ashrc` file to root ( home ) and then edit the right rc file (~/.bashrc f
  - [ ] [Micromamba](https://mamba.readthedocs.io/en/latest/installation.html)
  - [ ] [Zoxide](https://github.com/ajeetdsouza/zoxide)
  - [ ] [Antigen](https://github.com/zsh-users/antigen)
+ - [ ] Install important apps like : tldr, rg, fd, batcat https://github.com/ibraheemdev/modern-unix
  
