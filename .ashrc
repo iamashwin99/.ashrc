@@ -24,6 +24,12 @@ function mkcd() {
   mkdir -p "$@" && cd "$@"
 }
 
+# Upload a file to http://sprunge.us/ and return its url
+function sprungeit {
+    cat $1 | curl -F 'sprunge=<-' http://sprunge.us
+}
+
+
 # Startup commands
 # if conda exists, activate base
 if [ -x "$(command -v conda)" ]; then
