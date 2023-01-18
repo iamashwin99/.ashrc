@@ -20,6 +20,8 @@ or manually edit the right rc file (~/.bashrc for bash and ~/.zshrc for zsh) wit
 ###### Ashwin's Customizations ######
 [[ ! -f ~/.ashrc/.ashrc ]] || . ~/.ashrc/.ashrc
 ```
+By default the installer and the rc file assumes that this repo is cloned at `~/.ashrc` if not, maunally edit the env variable `$ASHRC` (in terminal and the .ashrc file) to point to the correct installation location.
+
 # TODO
  - [ ] Add zsh configs 
  - [ ] [Oh My Zsh + PowerLevel10k](https://dev.to/abdfnx/oh-my-zsh-powerlevel10k-cool-terminal-1no0)
