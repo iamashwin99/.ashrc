@@ -17,7 +17,7 @@ alias c='batcat'
 
 # ENVs
 export EDITOR='code' # choose vscode as the default editor
-
+export ASHRC=$HOME/.ashrc
 # Functions
 # Create a new directory and enter it
 function mkcd() {
