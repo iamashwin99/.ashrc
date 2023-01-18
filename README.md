@@ -18,4 +18,5 @@ Copy `.ashrc` file to root ( home ) and then edit the right rc file (~/.bashrc f
  - [ ] [Antigen](https://github.com/zsh-users/antigen)
  - [ ] Install important apps like : tldr, rg, fd, batcat https://github.com/ibraheemdev/modern-unix
  - [ ] Add git configs
+ - [ ] Auto update functionality
  
