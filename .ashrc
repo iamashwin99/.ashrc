@@ -31,6 +31,9 @@ function sprungeit {
 
 
 # Startup commands
+# Update the repo
+git -C $ASHRC pull -q
+
 # if conda exists, activate base
 if [ -x "$(command -v conda)" ]; then
   conda activate base
