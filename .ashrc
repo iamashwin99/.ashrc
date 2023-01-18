@@ -29,11 +29,15 @@ function sprungeit {
     cat $1 | curl -F 'sprunge=<-' http://sprunge.us
 }
 
+# Funciton to update the repo
+function updateashrc {
+    git -C $ASHRC pull -q --ff-only 
+}
 
 # Startup commands
 # Update the repo (only 20 % of the time)
 if [ $(($RANDOM % 100)) -lt 20 ]; then
-  git -C $ASHRC pull -q --ff-only 
+  updateashrc
 fi
 
 
