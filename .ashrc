@@ -31,8 +31,11 @@ function sprungeit {
 
 
 # Startup commands
-# Update the repo
-git -C $ASHRC pull -q
+# Update the repo (only 20 % of the time)
+if [ $(($RANDOM % 100)) -lt 20 ]; then
+  git -C $ASHRC pull -q --ff-only 
+fi
+
 
 # if conda exists, activate base
 if [ -x "$(command -v conda)" ]; then
