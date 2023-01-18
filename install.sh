@@ -1,6 +1,6 @@
-if [ "$SHELL" == "/bin/bash" ]; then
+if [ -n "$BASH_VERSION" ]; then
     rc_file=~/.bashrc
-elif [ "$SHELL" == "/bin/zsh" ]; then
+elif [ -n "$ZSH_VERSION" ]; then
     rc_file=~/.zshrc
 else
     rc_file=~/.bashrc
