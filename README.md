@@ -9,7 +9,13 @@ Clone this repo to your `$HOME`
 cd $HOME
 git clone https://github.com/iamashwin99/.ashrc
 ```
-Now edit the right rc file (~/.bashrc for bash and ~/.zshrc for zsh) with the following lines:
+Now run the installer:
+
+```shell
+chmod +x  install.sh
+./install.sh
+```
+or manually edit the right rc file (~/.bashrc for bash and ~/.zshrc for zsh) with the following lines:
 ```bash
 ###### Ashwin's Customizations ######
 [[ ! -f ~/.ashrc/.ashrc ]] || . ~/.ashrc/.ashrc
