@@ -14,6 +14,8 @@ alias spackitup='source share/spack/setup-env.sh'
 alias loadopus='CURDIR=$(pwd); cd ~/spackbox/spacklatest; spackitup; spack env activate octopus_latest; spack load octopus; cd "$CURDIR"'
 # alias to batcat
 alias c='batcat'
+# alias to download octopus
+git clone https://gitlab.com/octopus-code/octopus.git
 
 # ENVs
 export EDITOR='code' # choose vscode as the default editor
