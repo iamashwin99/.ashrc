@@ -1,4 +1,12 @@
 ###### Ashwin's Customizations ######
+# Preloads
+# load oh-my-zsh if it exists at ~/.ohmyzshrc
+[[ ! -f  $HOME/.ohmyzshrc ]] || . $HOME/.ohmyzshrc
+
+
+
+
+
 # aliases
 # if micromamba exists, alias conda to micromamba
 if [ -x "$(command -v micromamba)" ]; then
