@@ -2,7 +2,8 @@
 # Preloads
 # load oh-my-zsh if it exists at ~/.ohmyzshrc
 [[ ! -f  $HOME/.ohmyzshrc ]] || . $HOME/.ohmyzshrc
-
+# Enable p10k config 
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
 
