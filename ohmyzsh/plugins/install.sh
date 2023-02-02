@@ -2,7 +2,7 @@
 
 # installd zsh-syntax-highlighting
 # if folder $ZSH_CUSTOM/plugins/zsh-syntax-highlighting is not present then clone zsh-syntax-highlighting
-if [ ! -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]; then
+if [ ! -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]; then
     # echo installing with cyan color and reset color
     echo -e "\033[36mInstalling zsh-syntax-highlighting\033[0m"
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -10,7 +10,7 @@ fi
 
 # installd zsh-autosuggestions
 # if folder $ZSH_CUSTOM/plugins/zsh-autosuggestions is not present then clone zsh-autosuggestions
-if [ ! -d "$ZSH_CUSTOM/plugins/zsh-autosuggestions" ]; then
+if [ ! -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]; then
     echo -e "\033[36mInstalling zsh-autosuggestions\033[0m"
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 fi
