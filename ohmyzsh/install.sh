@@ -9,4 +9,5 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
     # Install powerlevel10k
     . pw10k/install.sh
     # install plugins=( zsh-syntax-highlighting zsh-autosuggestions )
+    . plugins/install.sh
 fi
