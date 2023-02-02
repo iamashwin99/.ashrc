@@ -12,6 +12,7 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
     # install plugins=( zsh-syntax-highlighting zsh-autosuggestions )
     echo -e "\033[36mInstalling plugins\033[0m"
     . ohmyzsh/plugins/install.sh
-fi
+else
 
 echo -e "\033[36mSkipping install of oh my zsh\033[0m"
+fi
