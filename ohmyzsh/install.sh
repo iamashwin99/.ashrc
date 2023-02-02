@@ -7,8 +7,10 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
     ln -s $ASHRC/ohmyzsh/ohmyzshrc.sh ~/.ohmyzshrc
 
     # Install powerlevel10k
+    echo -e "\033[36mInstalling powerlevel10k\033[0m"
     . ohmyzsh/pw10k/install.sh
     # install plugins=( zsh-syntax-highlighting zsh-autosuggestions )
+    echo -e "\033[36mInstalling plugins\033[0m"
     . ohmyzsh/plugins/install.sh
 fi
 
