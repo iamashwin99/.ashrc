@@ -1,3 +1,6 @@
+# stop on error
+set -e
+
 if [ -n "$BASH_VERSION" ]; then
     rc_file=~/.bashrc
 elif [ -n "$ZSH_VERSION" ]; then
