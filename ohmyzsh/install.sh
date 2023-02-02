@@ -4,7 +4,7 @@
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo -e "\033[36mInstalling oh-my-zsh\033[0m"
     git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
-    ln -s .ohmyzshrc ~/.ohmyzshrc
+    ln -s ohmyzsh/ohmyzshrc.sh ~/.ohmyzshrc
 
     # Install powerlevel10k
     . ohmyzsh/pw10k/install.sh
