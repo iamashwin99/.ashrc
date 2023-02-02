@@ -17,7 +17,7 @@ fi
 
 # install tran
 echo -e "\033[36mInstalling tran\033[0m"
-curl -fsSL https://cutt.ly/tran-cli | zsh
+curl -fsSL https://cutt.ly/tran-cli | bash
 
 # install zoxide
 echo -e "\033[36mInstalling zoxide\033[0m"
