@@ -1,10 +1,5 @@
 #!/bin/zsh
 
-# if $ZSH_CUSTOM is not set source ~/.ohmyzshrc and set $ZSH_CUSTOM
-if [ -z "$ZSH_CUSTOM" ]; then
-    . ~/.ohmyzshrc
-fi
-
 # installd zsh-syntax-highlighting
 # if folder $ZSH_CUSTOM/plugins/zsh-syntax-highlighting is not present then clone zsh-syntax-highlighting
 if [ ! -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]; then
