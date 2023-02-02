@@ -11,4 +11,4 @@ fi
 if [ ! -d "$ZSH_CUSTOM/themes/powerlevel10k" ]; then
     echo -e "\033[36mInstalling powerlevel10k\033[0m"
     git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-    ln -s ohmyzsh/p10k.zsh ~/.p10k.zsh
+    ln -s $ASHRC/ohmyzsh/p10k.zsh ~/.p10k.zsh

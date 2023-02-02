@@ -16,4 +16,4 @@ fi
 
 # Setup .ashrc in $rc_file
 echo -e "\033[36mSetting up .ashrc\033[0m"
-echo -e "\n###### Ashwin's Customizations ######\n[[ ! -f  $ASHRC/.ashrc ]] || . $ASHRC/.ashrc" >> $rc_file
+echo -e "\n###### Ashwin's Customizations ######\n[[ ! -f  $ASHRC/ashrc.sh ]] || . $ASHRC/ashrc.sh" >> $rc_file
