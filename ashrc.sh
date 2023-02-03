@@ -15,8 +15,14 @@ if [ -x "$(command -v micromamba)" ]; then
 fi
 # ls with colors
 alias ls="ls --color=auto"
-# ls -lah returns long listing with human readable sizes
-alias l="ls -lah"
+# ls -lah returns long listing with human readable sizes ( use exa if available )
+if [ -x "$(command -v exa)" ]; then
+    alias ls="exa"
+    alias l="exa --long --all --group"
+else
+    alias l="ls -lah"
+fi
+
 # alias to spack setup env
 alias spackitup='source share/spack/setup-env.sh' 
 # alias to load octopus
@@ -25,6 +31,9 @@ alias loadopus='CURDIR=$(pwd); cd ~/spackbox/spacklatest; spackitup; spack env a
 alias c='batcat'
 # alias to download octopus
 alias cloneoctopus='git clone https://gitlab.com/octopus-code/octopus.git'
+# alias to clone spack
+alias clonespack='git clone https://github.com/spack/spack.git'
+
 
 # ENVs
 export EDITOR='code' # choose vscode as the default editor
