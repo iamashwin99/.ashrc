@@ -1,9 +1,13 @@
 ###### Ashwin's Customizations ######
 # Preloads
-# load oh-my-zsh if it exists at ~/.ohmyzshrc
-[[ ! -f  $HOME/.ohmyzshrc ]] || . $HOME/.ohmyzshrc
-# Enable p10k config 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# load oh-my-zsh if it exists at ~/.ohmyzshrc  and ZSH_VERSION is set
+if [ -f $HOME/.ohmyzshrc ] && [ -n "$ZSH_VERSION" ]; then
+  . $HOME/.ohmyzshrc
+  # Enable p10k config 
+  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+fi
+
+
 
 
 
