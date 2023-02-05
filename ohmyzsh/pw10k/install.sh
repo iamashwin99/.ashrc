@@ -8,3 +8,9 @@ if [ ! -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k" ]; then
     git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
     ln -s $ASHRC/ohmyzsh/pw10k/p10k.zsh ~/.p10k.zsh
 fi
+# install meslo-fonts
+# if  ~/.fonts/'MesloLGS NF Regular.ttf' is not present then download and install fonts
+if [ ! -f ~/.fonts/'MesloLGS NF Regular.ttf' ]; then
+    echo -e "\033[36mInstalling MesloLGS NF Regular.ttf\033[0m"
+    . $ASHRC/ohmyzsh/install-meslo-fonts.sh
+fi
