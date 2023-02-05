@@ -17,13 +17,15 @@ fi
 if [ -x "$(command -v micromamba)" ]; then
   alias conda="micromamba"
 fi
-# ls with colors
-alias ls="ls --color=auto"
-# ls -lah returns long listing with human readable sizes ( use exa if available )
+
+# redefine ls and l  ( use exa if available )
 if [ -x "$(command -v exa)" ]; then
     alias ls="exa"
     alias l="exa --long --all --group"
 else
+    # ls with colors
+    alias ls="ls --color=auto"
+    # ls -lah returns long listing with human readable sizes
     alias l="ls -lah"
 fi
 
