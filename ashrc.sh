@@ -29,6 +29,9 @@ else
     alias l="ls -lah"
 fi
 
+# Forward authenticating agent ( makesure the key is availalbe ins ssh-add -L , if not add it)
+alias ssh="ssh -XA"
+
 # alias to spack setup env
 alias spackitup='source share/spack/setup-env.sh' 
 # alias to load octopus
