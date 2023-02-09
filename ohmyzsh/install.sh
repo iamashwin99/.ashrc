@@ -6,13 +6,15 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
     git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
     ln -s $ASHRC/ohmyzsh/ohmyzshrc.sh ~/.ohmyzshrc
 
-    # Install powerlevel10k
-    echo -e "\033[36mInstalling powerlevel10k\033[0m"
-    . ohmyzsh/pw10k/install.sh
-    # install plugins=( zsh-syntax-highlighting zsh-autosuggestions )
-    echo -e "\033[36mInstalling plugins\033[0m"
-    . ohmyzsh/plugins/install.sh
+
 else
 
 echo -e "\033[36mSkipping install of oh my zsh\033[0m"
 fi
+
+# Install powerlevel10k
+echo -e "\033[36mInstalling powerlevel10k\033[0m"
+. ohmyzsh/pw10k/install.sh
+# install plugins=( zsh-syntax-highlighting zsh-autosuggestions )
+echo -e "\033[36mInstalling plugins\033[0m"
+. ohmyzsh/plugins/install.sh

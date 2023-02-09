@@ -16,6 +16,14 @@ fi
 # Install booleans
 # if SKIP_OH_MY_ZSH is not set then install oh-my-zsh through script at ohmyzsh/install.sh
 [ -z "$SKIP_OH_MY_ZSH" ] &&  . ohmyzsh/install.sh
+# install zoxd
+[ -z "$SKIP_ZOXD" ] &&  . zoxd/install.sh
+
+
+# Install configs
+source $ASHRC/configs/default-configs.sh
+
+
 
 # Setup .ashrc in $rc_file
 echo -e "\033[36mSetting up .ashrc\033[0m"

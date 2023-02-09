@@ -9,9 +9,6 @@ fi
 
 
 
-
-
-
 # aliases
 # if micromamba exists, alias conda to micromamba
 if [ -x "$(command -v micromamba)" ]; then
