@@ -36,8 +36,17 @@ alias ssh="ssh -XA"
 alias spackitup='source share/spack/setup-env.sh' 
 # alias to load octopus
 alias loadopus='CURDIR=$(pwd); cd ~/spackbox/spacklatest; spackitup; spack env activate octopus_latest; spack load octopus; cd "$CURDIR"'
-# alias to batcat
-alias c='batcat'
+# if batcat or bat exits, alias it to c else alias it to less
+if [ -x "$(command -v batcat)" ]; then
+  alias c='batcat'
+elif [ -x "$(command -v bat)" ]; then
+  alias c='bat'
+else
+  alias c='less -RS'
+fi
+# alias pforest to ps auxwww
+alias pforest='ps auxww --forest |c'
+
 # alias to download octopus
 alias cloneoctopus='git clone https://gitlab.com/octopus-code/octopus.git'
 # alias to clone spack
