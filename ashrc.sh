@@ -17,8 +17,8 @@ fi
 
 # redefine ls and l  ( use exa if available )
 if [ -x "$(command -v exa)" ]; then
-    alias ls="exa"
-    alias l="exa --long --all --group"
+    alias ls="exa --icons --git --color=always"
+    alias l="exa --icons --long --all --group --header --git --color=always"
 else
     # ls with colors
     alias ls="ls --color=auto"
