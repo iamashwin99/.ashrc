@@ -88,4 +88,6 @@ if command -v zoxide > /dev/null; then
   else
     eval "$(zoxide init bash)"
   fi
+  # alias cd to z
+  alias cd='z'
 fi
