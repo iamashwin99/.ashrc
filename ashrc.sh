@@ -67,6 +67,7 @@ function sprungeit {
 # Funciton to update the repo
 function updateashrc {
     git -C $ASHRC pull -q --ff-only 
+    source $ASHRC/ashrc.sh
 }
 
 # Startup commands
