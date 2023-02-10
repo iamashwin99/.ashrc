@@ -15,9 +15,11 @@ fi
 
 # Install booleans
 # if SKIP_OH_MY_ZSH is not set then install oh-my-zsh through script at ohmyzsh/install.sh
-[ -z "$SKIP_OH_MY_ZSH" ] &&  . ohmyzsh/install.sh
+[ -z "$SKIP_OH_MY_ZSH" ] &&  . $ASHRC/ohmyzsh/install.sh
 # install zoxd
-[ -z "$SKIP_ZOXD" ] &&  . zoxd/install.sh
+[ -z "$SKIP_ZOXD" ] &&  . $ASHRC/zoxd/install.sh
+# install exa
+[ -z "$SKIP_EXA" ] &&  . $ASHRC/exa/install.sh
 
 
 # Install configs
