@@ -69,6 +69,22 @@ function updateashrc {
     git -C $ASHRC pull -q --ff-only 
     source $ASHRC/ashrc.sh
 }
+# Module (lmod) wrapper to backup FPATHs
+mod() {
+  # Backup the current FPATH
+  FPATH_BKP=$FPATH
+
+  # Run the "module" command with the provided arguments
+  module "$@"
+
+  # Check if the backed-up FPATH is already in the current FPATH
+  if [[ ":$FPATH:" != *":$FPATH_BKP:"* ]]; then
+    # Append the backed-up FPATH to the current FPATH
+    FPATH=$FPATH_BKP:$FPATH
+  fi
+}
+
+
 
 # Startup commands
 # Update the repo (only 20 % of the time)
