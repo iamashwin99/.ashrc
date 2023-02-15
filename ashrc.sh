@@ -51,7 +51,10 @@ alias clonespack='git clone https://github.com/spack/spack.git'
 
 
 # ENVs
-export EDITOR='code' # choose vscode as the default editor
+if [ -x "$(command -v code)" ]; then
+  export VISUAL='code' # choose vscode as the default editor
+fi
+EDITOR = vi -e
 export ASHRC=$HOME/.ashrc
 # Functions
 # Create a new directory and enter it
