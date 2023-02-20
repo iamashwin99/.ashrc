@@ -11,7 +11,7 @@ fi
 
 # aliases
 # if micromamba exists, alias conda to micromamba
-if [ -x "$(command -v micromamba)" ]; then
+if command -v micromamba > /dev/null; then
   alias conda="micromamba"
 fi
 
