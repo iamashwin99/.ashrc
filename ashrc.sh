@@ -55,7 +55,8 @@ if [ -x "$(command -v code)" ]; then
   export VISUAL='code' # choose vscode as the default editor
 fi
 export EDITOR='vi -e'
-export ASHRC=$HOME/.ashrc
+#if $ASHRC not set then set it to $HOME/.ashrc
+[ -z "$ASHRC" ] && export ASHRC=$HOME/.ashrc
 # Functions
 # Create a new directory and enter it
 function mkcd() {
