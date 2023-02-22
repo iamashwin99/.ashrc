@@ -44,6 +44,9 @@ fi
 # alias pforest to ps auxwww
 alias pforest='ps auxww --forest |c'
 
+# alias to cd and ls
+alias cdl='cd "$@" && ls'
+
 # alias to download octopus
 alias cloneoctopus='git clone https://gitlab.com/octopus-code/octopus.git'
 # alias to clone spack
