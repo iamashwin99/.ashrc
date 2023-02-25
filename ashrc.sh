@@ -14,7 +14,7 @@ else
   SHELL_NAME="bash"
 fi
 if [ -f $HOME/mambaforge/bin/conda ]; then
-  eval "$($HOME/mambaforge/bin/conda shell.SHELL_NAME hook)"
+  eval "$($HOME/mambaforge/bin/conda shell.$SHELL_NAME hook)"
 fi
 
 
