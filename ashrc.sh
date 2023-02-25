@@ -7,9 +7,14 @@ if [ -f $HOME/.ohmyzshrc ] && [ -n "$ZSH_VERSION" ]; then
   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
 
-#eval "$(/home/karnada/mambaforge/bin/conda shell.YOUR_SHELL_NAME hook)" if it exists
+#hook micromamba if it exists
+if [ -n "$ZSH_VERSION" ]; then
+  SHELL_NAME="zsh"
+else
+  SHELL_NAME="bash"
+fi
 if [ -f $HOME/mambaforge/bin/conda ]; then
-  eval "$($HOME/mambaforge/bin/conda shell.$SHELL hook)"
+  eval "$($HOME/mambaforge/bin/conda shell.SHELL_NAME hook)"
 fi
 
 
