@@ -7,6 +7,10 @@ if [ -f $HOME/.ohmyzshrc ] && [ -n "$ZSH_VERSION" ]; then
   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
 
+#eval "$(/home/karnada/mambaforge/bin/conda shell.YOUR_SHELL_NAME hook)" if it exists
+if [ -f $HOME/mambaforge/bin/conda ]; then
+  eval "$($HOME/mambaforge/bin/conda shell.$SHELL hook)"
+fi
 
 
 # aliases
