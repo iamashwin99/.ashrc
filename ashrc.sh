@@ -62,6 +62,9 @@ alias cloneoctopus='git clone https://gitlab.com/octopus-code/octopus.git'
 # alias to clone spack
 alias clonespack='git clone https://github.com/spack/spack.git'
 
+# shell dependent 
+# alias for resetting term
+ alias resetterm="exec $SHELL_NAME -l"
 
 # ENVs
 if [ -x "$(command -v code)" ]; then
