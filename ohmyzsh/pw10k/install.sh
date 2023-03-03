@@ -12,5 +12,5 @@ ln -s $ASHRC/ohmyzsh/pw10k/p10k.zsh ~/.p10k.zsh
 # if  ~/.fonts/'MesloLGS NF Regular.ttf' is not present then download and install fonts
 if [ ! -f ~/.fonts/'MesloLGS NF Regular.ttf' ]; then
     echo -e "\033[36mInstalling MesloLGS NF Regular.ttf\033[0m"
-    . $ASHRC/ohmyzsh/install-meslo-fonts.sh
+    . $ASHRC/ohmyzsh/pw10k/install-meslo-fonts.sh
 fi
