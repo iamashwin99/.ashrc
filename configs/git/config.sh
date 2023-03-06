@@ -1,6 +1,6 @@
 
 # configure git user name and email
-git config --global user.name "iamashwin"
+git config --global user.name "iamashwin99"
 git config --global user.email "ashwin-kumar.karnad@mpsd.mpg.de"
 
 # configure git to use vim as default editor
