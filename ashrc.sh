@@ -61,6 +61,12 @@ alias cdl='function _cdl(){ cd "$@" && ls; };_cdl'
 alias cloneoctopus='git clone https://gitlab.com/octopus-code/octopus.git'
 # alias to clone spack
 alias clonespack='git clone https://github.com/spack/spack.git'
+# alias to clone spack-environments
+alias clonespack-env='git clone https://gitlab.gwdg.de/mpsd-cs/spack-environments.git'
+# alias to clone octopus in spack
+aliias cloneois='git clone git@github.com:iamashwin99/octopus-in-spack.git'
+# alias to clone my spack fork
+alias clonemyspack='git clone git@github.com:iamashwin99/spack.git'
 
 # shell dependent 
 # alias for resetting term
