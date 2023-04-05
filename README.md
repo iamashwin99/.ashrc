@@ -66,3 +66,4 @@ updateashrc
 - [ ] [Antigen](https://github.com/zsh-users/antigen)
 - [ ] Install important apps like : tldr, rg, fd, batcat https://github.com/ibraheemdev/modern-unix
 - [ ] Add git configs
+- [ ] Save $ASHRC from before installing
