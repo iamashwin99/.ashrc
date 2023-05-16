@@ -6,7 +6,10 @@ if [ -f $HOME/.ohmyzshrc ] && [ -n "$ZSH_VERSION" ]; then
   # Enable p10k config 
   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
-
+# add "$HOME/.local/bin" to path if its not already there
+if [ -d "$HOME/.local/bin" ] && ! echo "$PATH" | grep -q "$HOME/.local/bin"; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 #hook micromamba if it exists
 if [ -n "$ZSH_VERSION" ]; then
   SHELL_NAME="zsh"
@@ -25,9 +28,7 @@ if command -v micromamba > /dev/null; then
 fi
 
 # redefine ls and l  ( use exa if available )
-if [ -x $HOME/.local/bin/exa ]; then
-  alias exa='$HOME/.local/bin/exa'
-fi
+
 if [ -x "$(command -v exa)" ]; then
     alias ls="exa --icons --git --color=always"
     alias l="exa --icons --long --all --group --color=always"
