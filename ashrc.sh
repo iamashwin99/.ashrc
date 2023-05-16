@@ -25,7 +25,7 @@ if command -v micromamba > /dev/null; then
 fi
 
 # redefine ls and l  ( use exa if available )
-if [ -x $HOME/.local/bin/exa ]; then                                                                                                      ─╯
+if [ -x $HOME/.local/bin/exa ]; then
   alias exa='$HOME/.local/bin/exa'
 fi
 if [ -x "$(command -v exa)" ]; then
