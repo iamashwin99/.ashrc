@@ -23,7 +23,7 @@ or manually edit the right rc file (~/.bashrc for bash and ~/.zshrc for zsh) wit
 
 ```bash
 ###### Ashwin's Customizations ######
-[[ ! -f ~/.ashrc/.ashrc ]] || . ~/.ashrc/.ashrc
+[[ ! -f ~/.ashrc/.ashrc ]] || . ~/.ashrc/ashrc.sh
 ```
 
 By default the installer and the rc file assumes that this repo is cloned at `~/.ashrc` if not, maunally edit the env variable `$ASHRC` (in terminal and the .ashrc file) to point to the correct installation location.
