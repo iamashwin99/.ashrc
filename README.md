@@ -16,7 +16,7 @@ git clone https://github.com/iamashwin99/.ashrc
 Now cd into `.ashrc` and run the installer:
 
 ```shell
-cd .ashrc && . install.sh
+cd .ashrc && export ASHRC=`pwd` && source install.sh
 ```
 
 or manually edit the right rc file (~/.bashrc for bash and ~/.zshrc for zsh) with the following lines:
