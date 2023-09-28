@@ -20,6 +20,8 @@ fi
 [ -z "$SKIP_ZOXD" ] &&  . $ASHRC/zoxd/install.sh
 # install exa
 [ -z "$SKIP_EXA" ] &&  . $ASHRC/exa/install.sh
+# install tmux
+[ -z "$SKIP_TMUX" ] &&  . $ASHRC/tmux/install.sh
 
 
 # Install configs
