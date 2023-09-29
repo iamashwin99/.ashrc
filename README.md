@@ -67,3 +67,4 @@ updateashrc
 - [ ] Install important apps like : tldr, rg, fd, batcat https://github.com/ibraheemdev/modern-unix
 - [ ] Add git configs
 - [ ] Save $ASHRC from before installing
+- [ ] automate config for [vscode+tmux](https://techspresso.dev/posts/tmux-and-vscode-persist-terminals-for-productivity-and-profit/)
