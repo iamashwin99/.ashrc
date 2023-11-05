@@ -28,7 +28,7 @@ or manually edit the right rc file (~/.bashrc for bash and ~/.zshrc for zsh) wit
 or alternatively on a shared machine set it at 
 ```bash
 ###### Ashwin's Customizations ######
-export ASHRC=/home/mpsddeb/karnada/.ashrc
+export ASHRC=/home/mpsddeb/karnada/.ashrc  # Path to cloned copy
 alias ashitup="[[ ! -f ${ASHRC}/ashrc.sh ]] || source ${ASHRC}/ashrc.sh"
 alias ashwinstmux="tmux -f ${ASHRC}/tmux/tmux.conf"
 ```
