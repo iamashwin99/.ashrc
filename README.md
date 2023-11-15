@@ -23,7 +23,8 @@ or manually edit the right rc file (~/.bashrc for bash and ~/.zshrc for zsh) wit
 
 ```bash
 ###### Ashwin's Customizations ######
-[[ ! -f ~/.ashrc/ashrc.sh ]] || source ~/.ashrc/ashrc.sh
+export ASHRC=/home/karnada/.ashrc  # Path to cloned copy
+[[ ! -f $ASHRC/ashrc.sh ]] || source $ASHRC/ashrc.sh
 ```
 or alternatively on a shared machine set it at 
 ```bash
