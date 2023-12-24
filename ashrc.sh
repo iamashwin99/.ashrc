@@ -135,6 +135,6 @@ if command -v zoxide > /dev/null; then
   else
     eval "$(zoxide init bash)"
   fi
-  # alias cd to z
-  alias cd='z'
+  # alias cd to z; skip for now instead use fuzzy tab completion
+  # alias cd='z'
 fi
