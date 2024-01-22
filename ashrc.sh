@@ -27,6 +27,12 @@ if command -v micromamba > /dev/null; then
   alias conda="micromamba"
 fi
 
+# use cd1,2,3 for cd ../
+alias cd1="cd .."
+alias cd2="cd ../.."
+alias cd3="cd ../../../"
+
+
 # redefine ls and l  ( use exa if available )
 
 if [ -x "$(command -v exa)" ]; then
