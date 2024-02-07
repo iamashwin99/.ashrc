@@ -9,3 +9,5 @@ git config --global core.editor "vim"
 # configure git to use vimdiff as default merge tool
 git config --global merge.tool vimdiff
 
+# add alias to lg for pretty log
+git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
