@@ -26,7 +26,7 @@ or manually edit the right rc file (~/.bashrc for bash and ~/.zshrc for zsh) wit
 export ASHRC=/home/karnada/.ashrc  # Path to cloned copy
 [[ ! -f $ASHRC/ashrc.sh ]] || source $ASHRC/ashrc.sh
 ```
-or alternatively on a shared machine set it at 
+or alternatively on a shared machine set it at
 ```bash
 ###### Ashwin's Customizations ######
 export ASHRC=/home/mpsddeb/karnada/.ashrc  # Path to cloned copy
@@ -34,6 +34,10 @@ alias ashitup="[[ ! -f ${ASHRC}/ashrc.sh ]] || source ${ASHRC}/ashrc.sh"
 alias ashwinstmux="tmux -f ${ASHRC}/tmux/tmux.conf"
 ```
 By default the installer and the rc file assumes that this repo is cloned at `~/.ashrc` if not, maunally edit the env variable `$ASHRC` (in terminal and the .ashrc file) to point to the correct installation location.
+
+Further remember to install the pluging from within the various packages:
+- tmux:
+  - inside tmux type `prefix + I`
 
 # Features:
 
