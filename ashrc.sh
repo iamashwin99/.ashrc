@@ -1,9 +1,21 @@
 ###### Ashwin's Customizations ######
 # Preloads
-# load oh-my-zsh if it exists at ~/.ohmyzshrc  and ZSH_VERSION is set
-if [ -f $HOME/.ohmyzshrc ] && [ -n "$ZSH_VERSION" ]; then
+
+# check for shell
+if [ -n "$ZSH_VERSION" ]; then
+  SHELL_NAME="zsh"
+elif [ -n "$FISH_VERSION" ]; then
+  SHELL_NAME="fish"
+else
+  SHELL_NAME="bash"
+fi
+
+
+
+# load oh-my-zsh if it exists at ~/.ohmyzshrc
+if [ "$SHELL_NAME" == "zsh" ] && [ -f $HOME/.ohmyzshrc ]; then
   . $HOME/.ohmyzshrc
-  # Enable p10k config 
+  # Enable p10k config
   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
 # add "$HOME/.local/bin" to path if its not already there
@@ -11,11 +23,7 @@ if [ -d "$HOME/.local/bin" ] && ! echo "$PATH" | grep -q "$HOME/.local/bin"; the
     PATH="$HOME/.local/bin:$PATH"
 fi
 #hook micromamba if it exists
-if [ -n "$ZSH_VERSION" ]; then
-  SHELL_NAME="zsh"
-else
-  SHELL_NAME="bash"
-fi
+
 if [ -f $HOME/mambaforge/bin/conda ]; then
   eval "$($HOME/mambaforge/bin/conda shell.$SHELL_NAME hook)"
 fi
@@ -49,7 +57,7 @@ fi
 alias ssh="ssh -XA"
 
 # alias to spack setup env
-alias spackitup='source share/spack/setup-env.sh' 
+alias spackitup='source share/spack/setup-env.sh'
 # alias to load octopus
 alias loadopus='CURDIR=$(pwd); cd ~/spackbox/spacklatest; spackitup; spack env activate octopus_latest; spack load octopus; cd "$CURDIR"'
 # if batcat or bat exits, alias it to c else alias it to less
@@ -80,7 +88,7 @@ alias cloneois='git clone git@github.com:iamashwin99/octopus-in-spack.git'
 # alias to clone my spack fork
 alias clonemyspack='git clone git@github.com:iamashwin99/spack.git'
 
-# shell dependent 
+# shell dependent
 # alias for resetting term
  alias resetterm="exec $SHELL_NAME -l"
 
@@ -104,7 +112,7 @@ function sprungeit {
 
 # Funciton to update the repo
 function updateashrc {
-    git -C $ASHRC pull -q --ff-only 
+    git -C $ASHRC pull -q --ff-only
     source $ASHRC/ashrc.sh
 }
 # Module (lmod) wrapper to backup FPATHs
